@@ -1,0 +1,131 @@
+<!-- Portfolio: PyCraftedAI - Golden & Black Theme -->
+<!-- Tech: HTML + TailwindCSS + Flask-ready Jinja2 Templates -->
+<!-- Fonts: Times New Roman, Icons: Python, GitHub, AI-related -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyCraftedAI | Python & AI Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #000;
+      color: gold;
+    }
+    .typing-text::after {
+      content: '|';
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .fire-animation {
+      animation: fire 1.5s ease infinite;
+    }
+    @keyframes fire {
+      0% { color: red; }
+      50% { color: orange; }
+      100% { color: yellow; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="p-4 border-b border-gold text-gold flex justify-between items-center">
+    <h1 class="text-3xl font-bold">PyCraftedAI</h1>
+    <div class="space-x-6">
+      <a href="#home" class="hover:text-white">Home</a>
+      <a href="#about" class="hover:text-white">About Me</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#ai-lab" class="hover:text-white">AI Lab</a>
+      <a href="#resume" class="hover:text-white">Resume</a>
+      <a href="https://github.com/yourgithub" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="p-10 flex-1 flex flex-col justify-center items-start">
+    <h2 class="text-4xl mb-4 typing-text">Hi, I'm a Python + AI Developer</h2>
+    <p class="text-lg mb-6">I build smart things with code.</p>
+    <div class="flex space-x-4">
+      <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Python" alt="Python Logo" class="rounded-full w-20 h-20"/>
+      <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=AI" alt="AI Logo" class="rounded-full w-20 h-20"/>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="p-10 bg-black border-b border-gold">
+    <h2 class="text-3xl mb-6 border-b border-gold">About Me</h2>
+    <p class="text-lg">I am a passionate developer with a strong focus on Python and AI. I specialize in creating intelligent solutions and integrating them into real-world applications. My journey in coding began with a curiosity for automation and has evolved into a deep understanding of AI models, deep learning, and natural language processing.</p>
+    <p class="mt-4 text-lg">Currently, I am building interactive AI tools and working on exciting Python projects to push the limits of technology.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="p-10">
+    <h2 class="text-3xl mb-6 border-b border-gold">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="border p-4 rounded-lg">
+        <h3 class="text-2xl">AI Chatbot</h3>
+        <p>Flask + GPT API chatbot with memory.</p>
+        <a href="#" class="text-gold underline">View Demo</a>
+      </div>
+      <div class="border p-4 rounded-lg">
+        <h3 class="text-2xl">Image Generator</h3>
+        <p>Python-powered image generator using AI models.</p>
+        <a href="#" class="text-gold underline">Try it</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Lab Section -->
+  <section id="ai-lab" class="p-10">
+    <h2 class="text-3xl mb-6 border-b border-gold">AI Lab</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border p-4 rounded-lg">
+        <h3 class="text-xl">Chat with AI</h3>
+        <p>Ask me anything...</p>
+      </div>
+      <div class="border p-4 rounded-lg">
+        <h3 class="text-xl">Resume Analyzer</h3>
+        <p>Upload your resume and get highlights.</p>
+      </div>
+      <div class="border p-4 rounded-lg">
+        <h3 class="text-xl">Quote Generator</h3>
+        <p>AI-generated motivational quotes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="p-10">
+    <h2 class="text-3xl mb-6 border-b border-gold">Resume</h2>
+    <p>Click below to download or view a summarized version powered by AI.</p>
+    <a href="/static/resume.pdf" download class="text-gold underline">Download PDF</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-4 text-center border-t border-gold">
+    <p>&copy; 2025 PyCraftedAI. Made with 🐍 and ❤️</p>
+  </footer>
+
+  <script>
+    // Typing animation JS
+    const text = "Hi, I'm a Python + AI Developer";
+    const el = document.querySelector('.typing-text');
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+      }
+    }
+    el.textContent = '';
+    type();
+  </script>
+</body>
+</html>
